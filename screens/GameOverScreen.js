@@ -17,9 +17,7 @@ const GameOverScreen = props => {
                 <View style = {styles.resultContainer}>
                     <BodyText style = {styles.resultText}>Your phone needed <Text style = {styles.highlight}>{props.roundsNumber}</Text> rounds to guess the number <Text style = {styles.highlight}>{props.userNumber}</Text></BodyText>
                 </View>
-                <MainButton onPress = {props.onRestart}>
-                    NEW GAME
-                </MainButton>
+                <MainButton onPress = {props.onRestart}>NEW GAME</MainButton>
             </View>
         </ScrollView>
     )
@@ -30,11 +28,12 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
+        paddingVertical: 10
     },
     imageContainer: {
         width: Dimensions.get('window').width * 0.7,
         height: Dimensions.get('window').width * 0.7,
-        borderRadius: 150,
+        borderRadius: (Dimensions.get('window').width * 0.7) / 2,
         borderWidth: 3,
         borderColor: 'black',
         overflow: 'hidden',
